@@ -1,2 +1,23 @@
-title: "Diogo Duarte"
-description: "Neuroscience PhD Student | curious about all things motor"
+# title: "Diogo Duarte"
+# description: "Neuroscience PhD Student | curious about all things motor"
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-remote-theme
+
+author:
+  name: "Diogo Duarte"
+  avatar: "/assets/images/diogo_cr.png" # Path to your profile image
+  bio: "PhD candidate in Neuroscience. Researching locomotion, neural coding, and behavior."
+  location: "Lisboa, Portugal"
+  email: "diogo.fl.duarte.removethisandthedotbefore@gmail.com"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/diogoflduarte"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/dfduarte"
+
+theme_settings:
+  # Enable things like breadcrumbs, search, etc.
+  search_enabled: true
