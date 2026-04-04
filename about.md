@@ -1,11 +1,13 @@
 ---
 layout: about
-title: About
+title: ''
 menu: true
 order: 2
 ---
 
 # About Me
+
+<img src="/assets/images/diogo_cr.png" width="150" alt="photo">
 
 I'm Diogo Duarte, a Data/ML Engineer and Neuroscience PhD with 10+ years of experience building high-throughput data acquisition systems, ML/AI pipelines, and experimental platforms for academic research and industry deployment.
 

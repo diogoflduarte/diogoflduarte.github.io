@@ -1,7 +1,7 @@
 # Site settings
 # ==============
 title: Diogo Duarte
-tagline: "Data/ML Engineer | Neuroscience PhD"
+tagline: "Neuroscience Ph.D"
 description: "Data and ML Engineer with 10 years of experience building high-throughput data acquisition systems, ML/AI pipelines, and experimental platforms for academic research and industry deployment."
 url: "https://diogoflduarte.github.io"
 baseurl: ""
@@ -10,6 +10,13 @@ language: en
 # Theme
 # =====
 remote_theme: hydecorp/hydejack
+
+# image:
+#   path: /assets/images/diogo_cr.png
+#   srcset:
+#     1920w: /assets/image/diogo_cr.png
+#     960w: /assets/image/diogo_cr@0,5.png
+#     480w: /assets/image/diogo_cr@0,25.png
 
 # Author info
 # ==============
@@ -21,8 +28,19 @@ author:
     PhD in Neuroscience from Fundação Champalimaud with 10+ years building high-throughput experimental platforms.
   picture: /assets/images/diogo_cr.png
   social:
+    email: diogo.fl.duarte+site.gmail.com
     github: diogoflduarte
-    linkedin: dfduarte
+    linkedin: https://linkedin.com/in/dfduarte
+
+menu:
+  - title: Blog
+    url: /blog/
+  - title: Portfolio
+    url: /portfolio/
+  - title: Resume
+    url: /resume/
+  - title: About
+    url: /about/
 
 # Sidebar image and theme color of the site.
 # Under the `image` key, you can put the image address as the value.
