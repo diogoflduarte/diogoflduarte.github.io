@@ -1,24 +1,138 @@
-# title: "Diogo Duarte"
-# description: "Neuroscience PhD Student | curious about all things motor"
-remote_theme: "mmistakes/minimal-mistakes"
+# Site settings
+# ==============
+title: Diogo Duarte
+tagline: "Data/ML Engineer | Neuroscience PhD"
+description: "Data and ML Engineer with 10 years of experience building high-throughput data acquisition systems, ML/AI pipelines, and experimental platforms for academic research and industry deployment."
+url: "https://diogoflduarte.github.io"
+baseurl: ""
+language: en
+
+# Theme
+# =====
+remote_theme: hydecorp/hydejack
+
+# Author info
+# ==============
+author:
+  name: Diogo Duarte
+  email: diogo.fl.duarte@gmail.com
+  description: >
+    Data/ML Engineer with expertise in ETL, machine learning modeling, computer vision, and time series analysis.
+    PhD in Neuroscience from Fundação Champalimaud with 10+ years building high-throughput experimental platforms.
+  picture: /assets/images/diogo_cr.png
+  social:
+    github: diogoflduarte
+    linkedin: dfduarte
+
+# Sidebar image and theme color of the site.
+# Under the `image` key, you can put the image address as the value.
+# The best way is to host the image in your repo at `assets/img/sidebar-bg.jpg`.
+accent_image: /assets/img/sidebar-bg.jpg
+accent_color: rgb(79,177,186)
+
+# This is used for the `theme-color` meta tag,
+# which changes the background color of the browser UI in Chrome on Android.
+# Defaults to `accent_color`.
+theme_color: rgb(25,55,71)
+
+# The banner image of the home page.
+cover: true
+
+# The string encoding which fonts to fetch from Google Fonts.
+# See: https://hydejack.com/docs/configuration/
+google_fonts: Roboto+Condensed:700|Open+Sans:400,600
+
+# If you do not use a CDN to serve asset files, set `no_cdn` to `true` to
+# disable the CDN links for CSS and JS files in the `_includes/head.html` file.
+# Normally, these point to jsDelivr (a fast, global content delivery network),
+# which will also cache other public repositories.
+# Set to `true` if you are building the site on a machine with limited bandwidth.
+no_cdn: false
+
+# Set this to `true` if you don't want to show the search input in the sidebar.
+no_search: false
+
+# Set this to `true` if you don't want comments on every blog post.
+no_comments: true
+
+# Set this to `true` if you want to disable thefontsizing-adjustments
+# in the academic theme (`_sass/hydejack/_base.scss`).
+disable_typography: false
+
+# Set to `true` to disable the dark mode toggle.
+disable_darkmode: false
+
+# Hydejack Settings
+# =================
+hydejack:
+  post_addons: [about, newsletter]
+  project_addons: [about, newsletter]
+  offline: false
+
+# Collections
+# ===========
+collections:
+  featured_categories:
+    permalink: /blog/:name/
+    output: true
+
+  featured_posts:
+    permalink: /blog/:title/
+    output: true
+
+# File inclusion/exclusion
+# ========================
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+
+# Plugins
+# =======
 plugins:
   - jekyll-remote-theme
-  - jekyll-include-cache
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-optional-front-matter
+  - jekyll-paginate-v2
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+  - jemoji
 
-author:
-  name: "Diogo Duarte"
-  avatar: "/assets/images/diogo_cr.png" # Path to your profile image
-  bio: "PhD candidate in Neuroscience. Researching locomotion, neural coding, and behavior."
-  location: "Lisboa, Portugal"
-  email: "diogo.fl.duarte.removethisandthedotbefore@gmail.com"
+# SEO Tag
+# =======
+social:
+  name: Diogo Duarte
   links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/diogoflduarte"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://linkedin.com/in/dfduarte"
+    - https://github.com/diogoflduarte
+    - https://www.linkedin.com/in/dfduarte
 
-theme_settings:
-  # Enable things like breadcrumbs, search, etc.
-  search_enabled: true
+# Jekyll Feed
+# ===========
+feed:
+  posts_limit: 10
+
+# Markdown Processor
+# ==================
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  math_engine_opts:
+    preview: true
+    preview_as_code: true
+
+# Liquid
+# ======
+liquid:
+  error_mode: strict
+
+# Sass
+# ====
+sass:
+  style: compressed
