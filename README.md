@@ -1,6 +1,6 @@
 # Diogo Duarte's Personal Website
 
-Acess here: `https://diogoflduarte.github.io/`
+Acess here: [diogoflduarte.github.io](https://diogoflduarte.github.io/)
 
 ---
 
