@@ -3,117 +3,554 @@ layout: page
 title: Resume
 menu: true
 order: 3
-description: Professional resume of Diogo Duarte
+description: 
 ---
 
-# Diogo Duarte
-**Data/ML Engineer | Neuroscience PhD**
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-Oeiras, Lisboa | [diogo.fl.duarte@gmail.com](mailto:diogo.fl.duarte@gmail.com) | [(+351) 928 262 466](tel:+351928262466)  
-[github.com/diogoflduarte](https://github.com/diogoflduarte) | [linkedin.com/in/dfduarte](https://linkedin.com/in/dfduarte)
+        :root {
+            --primary: #00838f;
+            --text-dark: #2c3e50;
+            --text-light: #546e7a;
+            --bg-light: #f8f9fa;
+            --border: #eceff1;
+            --accent: #00838f;
+        }
 
----
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: white;
+        }
 
-## Professional Summary
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 450px 1fr;
+            gap: 40px;
+            padding: 50px 40px;
+        }
 
-Data/ML Engineer with 10+ years of experience building high-throughput data acquisition systems, ML/AI pipelines, and experimental platforms for academic research and industry deployment. Proven expertise in ETL, machine learning modeling, computer vision, and time series analysis. PhD in Neuroscience with strong foundation in biomedical engineering.
+        /* Header */
+        .header {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: start;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 20px;
+        }
 
----
+        .header-info h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
 
-## Core Competencies
+        .header-info p {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
 
-- **ETL and Data Engineering** — Pipeline design, data integration, SQL databases
-- **ML Modeling** — Classification, regression, neural networks, deep learning
-- **Time Series & Image Analysis** — Signal processing, computer vision, behavior tracking
-- **Computer Vision** — Classical image processing, CNNs, video analysis at scale
-- **Experimental Systems** — Multi-sensor integration, hardware-software systems, automation
-- **Software Engineering** — Full-stack development, system architecture, containerization
+        .contact-info {
+            font-size: 13px;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-top: 15px;
+        }
 
----
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-## Technical Stack
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
 
-**Programming Languages:** Python, C, C++, Matlab/Octave, git  
-**Machine Learning:** TensorFlow, Keras, scikit-learn, OpenCV  
-**Data Engineering:** ETL, SQL, Pandas, NumPy  
-**Visualization:** Plotly, Dash, Power BI, Matplotlib  
-**Hardware & Systems:** DAQ systems, CAD, Docker, System administration
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
 
----
+        .sidebar-section h3 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 0.8px;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
 
-## Professional Experience
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
-### Lab Manager & Research Software Engineer
-**NOVA SBE** — Cascais, Portugal | *2025–Current*
+        .tech-tag {
+            display: inline-block;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
 
-- Managed IT and lab resources for experimentation and teaching
-- Developed and validated software for data collection and automation
-- Created end-user evaluation methods for clients in SaaS and AI solutions
-- **Technologies:** Data engineering, software engineering, system administration
+        .competencies ul {
+            list-style: none;
+            font-size: 13px;
+            line-height: 2;
+            color: var(--text-light);
+        }
 
-### Graduate Researcher
-**Fundação Champalimaud** — Lisboa, Portugal | *2018–2024*
+        .competencies li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 8px;
+        }
 
-- Designed and assembled neurobehavioral experimental setups for mouse research
-- Engineered multi-stream data acquisition systems integrating NI DAQ and high-speed video (430 fps)
-- Computationally optimized firing rate estimation from neural data (30x performance improvement)
-- Implemented computer vision pipelines for animal tracking using classical methods and deep CNNs
-- Developed neural decoding models predicting animal behavior from neural population activity
-- Deployed virtual containers for large-scale neural simulations on remote servers
-- **Technologies:** DAQ electronics, multi-sensor integration, computer vision, GPU computing, artificial neural networks, Docker
+        .languages {
+            font-size: 13px;
+            line-height: 2;
+        }
 
-### Software Engineer & Data Scientist
-**Instituto de Biofísica e Engenharia Biomédica** — Lisboa, Portugal | *2017*
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
 
-- Created medical imaging analysis pipeline for pre-surgical planning
-- Tuned blind source separation models for functional imaging in patients
-- Automated functional imaging report generation
-- Coordinated closely with medicine and engineering teams
-- **Technologies:** Matlab, Blind Source Separation, DICOM
+        .language-item strong {
+            color: var(--text-dark);
+        }
 
-### Game Software Developer
-**Museu dos Valores Universais** — Mafra, Portugal | *2016*
+        .stars {
+            display: flex;
+            gap: 3px;
+        }
 
-- Implemented facial mimicry interactive game for children
-- **Technologies:** Unity, C#, Affectiva AI
+        .star {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
 
-### Researcher / MSc. Student
-**Institute of Cognitive Neuroscience, UCL** — London, England | *2014–2015*
+        /* Main content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
 
-- Developed hardware and software for human behavioral experiments
-- Quantified behavior through time series analysis
-- Estimated neural encoding schemas via multivariate analysis
-- **Technologies:** Computer-aided design, C++, Matlab
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
----
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 0.8px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+        }
 
-## Education
+        .job {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-**PhD in Neuroscience**  
-International Neuroscience Doctoral Programme, ITQB-NOVA / Fundação Champalimaud  
-Mar 2018 – Dec 2024 | Lisboa, Portugal
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 15px;
+        }
 
-**MSc in Biomedical Engineering**  
-Faculdade de Ciências, Universidade de Lisboa  
-Sep 2013 – May 2016 | Lisboa, Portugal
+        .job-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
 
-**BSc in Biomedical Engineering**  
-Faculdade de Ciências, Universidade de Lisboa  
-Sep 2010 – Jul 2013 | Lisboa, Portugal
+        .job-company {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+        }
 
----
+        .job-dates {
+            font-size: 12px;
+            color: var(--text-light);
+            white-space: nowrap;
+        }
 
-## Languages
+        .job-location {
+            font-size: 12px;
+            color: var(--text-light);
+        }
 
-- **Portuguese** (Native)
-- **English** (Fluent)
+        .job-description {
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
 
----
+        .job-description ul {
+            list-style: none;
+            margin: 8px 0;
+        }
 
-## Summary
+        .job-description li {
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+        }
 
-Versatile engineer and data scientist with deep expertise in building experimental systems, developing machine learning pipelines, and creating software solutions. Strong background in neuroscience research combined with practical software engineering skills. Passionate about understanding how systems work and building solutions with rigor and care.
+        .job-description li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
 
----
+        .job-skills {
+            font-size: 12px;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 6px;
+            padding-top: 8px;
+            border-top: 1px solid var(--border);
+        }
 
-*For more information or to discuss collaboration opportunities, please [contact me](mailto:diogo.fl.duarte@gmail.com).*
+        .job-skills strong {
+            color: var(--text-dark);
+        }
+
+        .education-item {
+            margin-bottom: 16px;
+        }
+
+        .education-degree {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .education-school {
+            font-size: 13px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .education-meta {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Summary section */
+        .summary-text {
+            font-size: 13px;
+            line-height: 1.8;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 30px 25px;
+            }
+
+            .header {
+                grid-column: 1;
+            }
+
+            .sidebar {
+                order: 3;
+                grid-column: 1;
+            }
+
+            .main-content {
+                order: 2;
+                grid-column: 1;
+            }
+
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                font-size: 32px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .tech-tag {
+                padding: 5px 10px;
+                font-size: 11px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-info">
+                <h1>DIOGO DUARTE</h1>
+            </div>
+            <div class="profile-pic"></div>
+        </div>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title">EXPERIENCE</h2>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Lab Manager & Research Software Engineer</div>
+                            <div class="job-company">NOVA SBE</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="job-dates">2025–Current</div>
+                            <div class="job-location">Cascais, Portugal</div>
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Managed IT and lab resources for experimentation and teaching</li>
+                            <li>Developed and validated software for data collection and automation</li>
+                            <li>Created end-user evaluation methods for clients in SaaS and AI solutions</li>
+                        </ul>
+                    </div>
+                    <div class="job-skills"><strong>Skills:</strong> Data and software engineering, system administration</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Graduate Researcher</div>
+                            <div class="job-company">Fundação Champalimaud</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="job-dates">2018–2024</div>
+                            <div class="job-location">Lisboa, Portugal</div>
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Designed and assembled neurobehavioral setups for mouse research</li>
+                            <li>Engineered multi-stream data acquisition systems (NI DAQ + 430 fps video)</li>
+                            <li>Computationally optimized estimation of firing rates from big data (30x faster)</li>
+                            <li>Tracked animal movement (classical image processing + deep CNNs)</li>
+                            <li>Predicted animal behavior from neural data (neural decoding by multilinear regression)</li>
+                            <li>Deployed virtual containers for large scale neural simulations in remote servers</li>
+                        </ul>
+                    </div>
+                    <div class="job-skills"><strong>Skills:</strong> DAQ electronics, multi-sensor integration, computer vision, GPU computing, artificial neural networks, Docker</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Software Engineer & Data Scientist</div>
+                            <div class="job-company">Instituto de Biofísica e Engenharia Biomédica</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="job-dates">2017</div>
+                            <div class="job-location">Lisboa, Portugal</div>
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Created a medical imaging analysis pipeline for pre-surgical planning</li>
+                            <li>Tuned blind source separation models for functional imaging in patients</li>
+                            <li>Communicated closely with medicine and engineering teams</li>
+                            <li>Automated the generation of functional imaging reports</li>
+                        </ul>
+                    </div>
+                    <div class="job-skills"><strong>Skills:</strong> Matlab, Blind Source Separation, DICOM</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Game Software Developer</div>
+                            <div class="job-company">Museu dos Valores Universais</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="job-dates">2016</div>
+                            <div class="job-location">Mafra, Portugal</div>
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Implemented a facial mimicry interactive game for children</li>
+                        </ul>
+                    </div>
+                    <div class="job-skills"><strong>Skills:</strong> Unity, C#, Affectiva AI</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Researcher / MSc. Student</div>
+                            <div class="job-company">Institute of Cognitive Neuroscience, UCL</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="job-dates">2014–2015</div>
+                            <div class="job-location">London, England</div>
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Developed hardware and software for human behavioral experiments</li>
+                            <li>Quantified behavior through timeseries analysis</li>
+                            <li>Estimated neural encoding schema via multivariate analysis</li>
+                        </ul>
+                    </div>
+                    <div class="job-skills"><strong>Skills:</strong> Computer Aided Design, C++, Matlab</div>
+                </div>
+            </section>
+        </main>
+        
+                <!-- Sidebar -->
+        <aside class="aside">
+            <div class="sidebar-section">
+            </div>
+
+            <div class="sidebar-section">
+                <h3>TECH STACK</h3>
+                <div class="tech-stack">
+                    <span class="tech-tag">python</span>
+                    <span class="tech-tag">C</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Matlab</span>
+                    <span class="tech-tag">git</span>
+                    <span class="tech-tag">ETL</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">scikit-learn</span>
+                    <span class="tech-tag">Tensorflow</span>
+                    <span class="tech-tag">Keras</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">Dash</span>
+                    <span class="tech-tag">Plotly</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">DAQ</span>
+                    <span class="tech-tag">CAD</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>CORE COMPETENCIES</h3>
+                <div class="competencies">
+                    <ul>
+                        <li>ETL and Data Engineering</li>
+                        <li>ML Modeling</li>
+                        <li>Time series and image analysis</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>LANGUAGES</h3>
+                <div class="languages">
+                    <div class="language-item">
+                        <strong>Portuguese</strong>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <strong>English</strong>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>EDUCATION</h3>
+                <div class="education-item">
+                    <div class="education-degree">PhD in Neuroscience</div>
+                    <div class="education-school">International Neuroscience Doctoral Programme, ITQB-NOVA / Fundação Champalimaud</div>
+                    <div class="education-meta">Mar 2018 – Dec 2024 • Lisboa, Portugal</div>
+                </div>
+                <div class="education-item">
+                    <div class="education-degree">MSc in Biomedical Engineering</div>
+                    <div class="education-school">Faculdade de Ciências, Universidade de Lisboa</div>
+                    <div class="education-meta">Sep 2013 – May 2016 • Lisboa, Portugal</div>
+                </div>
+                <div class="education-item">
+                    <div class="education-degree">BSc in Biomedical Engineering</div>
+                    <div class="education-school">Faculdade de Ciências, Universidade de Lisboa</div>
+                    <div class="education-meta">Sep 2010 – Jul 2013 • Lisboa, Portugal</div>
+                </div>
+            </div>
+        </aside>
+        
+        
+    </div>
+</body>
